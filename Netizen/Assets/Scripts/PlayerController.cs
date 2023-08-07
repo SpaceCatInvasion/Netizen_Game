@@ -41,7 +41,8 @@ public class PlayerController : MonoBehaviour
             horizontalInput = Input.GetAxis("Horizontal2");
             jump(false);
         }
-        transform.Translate(Vector3.right * sideSpeed * horizontalInput * Time.deltaTime);
+        playerRb.velocity = new Vector2(1 * sideSpeed * horizontalInput, playerRb.velocity.y);
+        //transform.Translate(Vector3.right * sideSpeed * horizontalInput * Time.deltaTime);
 
     }
     void jump(bool p1)
