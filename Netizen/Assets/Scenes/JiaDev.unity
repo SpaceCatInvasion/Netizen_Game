@@ -242,6 +242,8 @@ MonoBehaviour:
   player1: 1
   sideSpeed: 12
   jumpPower: 30
+  dashSpeed: 80
+  dashLength: 0.05
 --- !u!61 &210421002
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -502,6 +504,8 @@ MonoBehaviour:
   player1: 0
   sideSpeed: 12
   jumpPower: 30
+  dashSpeed: 80
+  dashLength: 0.05
 --- !u!61 &396749216
 BoxCollider2D:
   m_ObjectHideFlags: 0
