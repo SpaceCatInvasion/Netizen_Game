@@ -37,8 +37,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
         if (player1)
         {
             getPlayerDir(true);
@@ -50,15 +48,15 @@ public class PlayerController : MonoBehaviour
         else
         {
             getPlayerDir(false);
-            Debug.Log(Variables.player2Direction);
             horizontalInput = Input.GetAxis("Horizontal2");
             jump(false);
             dash(false);
             move(false);
         }
-        
-
     }
+
+    //Functions
+
     void jump(bool p1)
     {
         if (p1)
