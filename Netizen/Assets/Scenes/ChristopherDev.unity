@@ -385,6 +385,7 @@ MonoBehaviour:
   jumpPower: 30
   dashSpeed: 50
   dashLength: 0.08
+  stopDashDelay: 0.05
 --- !u!1 &976036745
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +423,7 @@ MonoBehaviour:
   jumpPower: 30
   dashSpeed: 50
   dashLength: 0.08
+  stopDashDelay: 0.05
 --- !u!61 &976036747
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -19,12 +19,13 @@ public class PlayerController : MonoBehaviour
     public float jumpPower;
     public float dashSpeed;
     public float dashLength;
+    public float stopDashDelay;
 
     //Private
     private float horizontalInput;
     private bool onGround;
     private Rigidbody2D playerRb;
-    private float playerDashY;
+    private bool dashed=false;
 
     //Timers
     private float dashTimer = 0;
@@ -76,25 +77,25 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        onGround = true;
-    }
-
     void dash(bool p1)
     {
-        if (p1)
+        if (!dashed)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift)) //p1 dash
+            if (p1)
             {
-                dashTimer = dashLength;
+                if (Input.GetKeyDown(KeyCode.LeftShift)) //p1 dash
+                {
+                    dashTimer = dashLength;
+                    dashed = true;
+                }
             }
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.B)) //p2 dash
+            else
             {
-                dashTimer = dashLength;
+                if (Input.GetKeyDown(KeyCode.B)) //p2 dash
+                {
+                    dashTimer = dashLength;
+                    dashed = true;
+                }
             }
         }
 
@@ -201,24 +202,43 @@ public class PlayerController : MonoBehaviour
         {
             if (dashTimer > 0)
             {
-                if (Variables.player1Direction >= 6) //Left Dash
+                if (Variables.player1Direction == 7) //Left Dash
                 {
                     playerRb.velocity = new Vector2(-dashSpeed, playerRb.velocity.y);
                 }
                 else if (Variables.player1Direction == 5) //Down Dash
                 {
-                    transform.position = new Vector2(transform.position.x, transform.position.y - 2.5f);
-                    dashTimer = 0;
+                    playerRb.velocity = new Vector2(playerRb.velocity.x, -dashSpeed);
                 }
-                else if (Variables.player1Direction >= 2) //Right Dash
+                else if (Variables.player1Direction == 3) //Right Dash
                 {
                     playerRb.velocity = new Vector2(dashSpeed, playerRb.velocity.y);
                 }
                 else if (Variables.player1Direction == 1) //Up Dash
                 {
-                    transform.position = new Vector2(transform.position.x, transform.position.y + 2.5f);
-                    dashTimer = 0;
+                    playerRb.velocity = new Vector2(playerRb.velocity.x,dashSpeed);
                 }
+                else if(Variables.player1Direction == 2) //Up Right
+                {
+                    playerRb.velocity = new Vector2(dashSpeed, dashSpeed);
+                }
+                else if (Variables.player1Direction == 4) //Down Right
+                {
+                    playerRb.velocity = new Vector2(dashSpeed, -dashSpeed);
+                }
+                else if(Variables.player1Direction == 6) //Down Left
+                {
+                    playerRb.velocity = new Vector2(-dashSpeed, -dashSpeed);
+                }
+                else if(Variables.player1Direction == 8) //Up Left
+                {
+                    playerRb.velocity = new Vector2(-dashSpeed, dashSpeed);
+                }
+                dashTimer -= Time.deltaTime;
+            }
+            else if (dashTimer>=-stopDashDelay)
+            {
+                playerRb.velocity = new Vector2(0, 0);
                 dashTimer -= Time.deltaTime;
             }
             else
@@ -230,24 +250,43 @@ public class PlayerController : MonoBehaviour
         {
             if (dashTimer > 0)
             {
-                if (Variables.player2Direction >= 6) //Left Dash
+                if (Variables.player2Direction == 7) //Left Dash
                 {
                     playerRb.velocity = new Vector2(-dashSpeed, playerRb.velocity.y);
                 }
                 else if (Variables.player2Direction == 5) //Down Dash
                 {
-                    transform.position = new Vector2(transform.position.x, transform.position.y - 2.5f);
-                    dashTimer = 0;
+                    playerRb.velocity = new Vector2(playerRb.velocity.x, -dashSpeed);
                 }
-                else if (Variables.player2Direction >= 2) //Right Dash
+                else if (Variables.player2Direction == 3) //Right Dash
                 {
                     playerRb.velocity = new Vector2(dashSpeed, playerRb.velocity.y);
                 }
                 else if (Variables.player2Direction == 1) //Up Dash
                 {
-                    transform.position = new Vector2(transform.position.x, transform.position.y + 2.5f);
-                    dashTimer = 0;
+                    playerRb.velocity = new Vector2(playerRb.velocity.x, dashSpeed);
                 }
+                else if (Variables.player2Direction == 2) //Up Right
+                {
+                    playerRb.velocity = new Vector2(dashSpeed, dashSpeed);
+                }
+                else if (Variables.player2Direction == 4) //Down Right
+                {
+                    playerRb.velocity = new Vector2(dashSpeed, -dashSpeed);
+                }
+                else if (Variables.player2Direction == 6) //Down Left
+                {
+                    playerRb.velocity = new Vector2(-dashSpeed, -dashSpeed);
+                }
+                else if (Variables.player2Direction == 8) //Up Left
+                {
+                    playerRb.velocity = new Vector2(-dashSpeed, dashSpeed);
+                }
+                dashTimer -= Time.deltaTime;
+            }
+            else if (dashTimer >= -stopDashDelay)
+            {
+                playerRb.velocity = new Vector2(0, 0);
                 dashTimer -= Time.deltaTime;
             }
             else
@@ -255,5 +294,12 @@ public class PlayerController : MonoBehaviour
                 playerRb.velocity = new Vector2(1 * sideSpeed * horizontalInput, playerRb.velocity.y);
             }
         }
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        onGround = true;
+        dashed = false;
     }
 }
