@@ -299,7 +299,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &448734095
 SpriteRenderer:
@@ -517,7 +517,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &976036749
 SpriteRenderer:
@@ -633,7 +633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1: 0
-  bulletPreFab: {fileID: 0}
+  bulletPreFab: {fileID: 2925415430746585292, guid: ad60792690e42b244989cfdbf0fb6eba, type: 3}
 --- !u!1 &1576377535
 GameObject:
   m_ObjectHideFlags: 0
