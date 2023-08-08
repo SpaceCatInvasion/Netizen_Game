@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MoveForward : MonoBehaviour
@@ -19,6 +20,10 @@ public class MoveForward : MonoBehaviour
     {
         transform.Translate(new Vector3(0, speed, 0)*Time.deltaTime);
         transform.localScale = new Vector3(size, size, size);
+        if (Vector2.Distance(transform.position, Variables.player1.transform.position) > 20 || Vector2.Distance(transform.position, Variables.player2.transform.position) > 20)
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
