@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 306811636}
   m_Layer: 0
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2417,7 +2417,8 @@ MonoBehaviour:
   tp1: {fileID: 1700772549}
   tp2: {fileID: 1926509811}
   telep: 0
-  player: {fileID: 306811635}
+  player1: {fileID: 306811635}
+  player2: {fileID: 1272744844}
 --- !u!4 &1209434661
 Transform:
   m_ObjectHideFlags: 0
@@ -2450,7 +2451,7 @@ GameObject:
   - component: {fileID: 1272744845}
   m_Layer: 0
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2988,7 +2989,8 @@ MonoBehaviour:
   tp1: {fileID: 1700772549}
   tp2: {fileID: 1926509811}
   telep: 0
-  player: {fileID: 306811635}
+  player1: {fileID: 306811635}
+  player2: {fileID: 1272744844}
 --- !u!1 &1787902603
 GameObject:
   m_ObjectHideFlags: 0
@@ -3215,7 +3217,8 @@ MonoBehaviour:
   tp1: {fileID: 1700772549}
   tp2: {fileID: 1926509811}
   telep: 1
-  player: {fileID: 306811635}
+  player1: {fileID: 306811635}
+  player2: {fileID: 1272744844}
 --- !u!61 &1926509815
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -9,8 +9,9 @@ public class Teleport : MonoBehaviour
     public GameObject tp1;
     public GameObject tp2;
     public bool telep;
-    public GameObject player;
-
+    public GameObject player1;
+    public GameObject player2;
+    public float timer = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -20,18 +21,36 @@ public class Teleport : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timer -= Time.deltaTime;
     }
 
-    private void teleport()
+    public void teleport(bool p1)
     {
-        if (telep == false)
+        if (p1)
         {
-            player.transform.position = new Vector2(tp2.transform.position.x, tp2.transform.position.y);
+            if (telep)
+            {
+                player1.transform.position = tp2.transform.position;
+                timer = 0.5f;
+            }
+            else
+            {
+                player1.transform.position = tp1.transform.position;
+                timer = 0.5f;
+            }
         }
         else
         {
-            player.transform.position = new Vector2(tp1.transform.position.x, tp1.transform.position.y);
+            if (telep)
+            {
+                player2.transform.position = tp2.transform.position;
+                timer = 0.5f;
+            }
+            else
+            {
+                player2.transform.position = tp1.transform.position;
+                timer = 0.5f;
+            }
         }
     }
 
@@ -40,9 +59,5 @@ public class Teleport : MonoBehaviour
  //       return Vector2.Distance(tp1.transform.position, tp2.transform.position);
 //    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // transform.position = new Vector2(transform.position.x -9, transform.position.y + 0);
-        teleport();
-    }
+    
 }
