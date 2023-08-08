@@ -5,6 +5,9 @@ using UnityEngine;
 public class GunScript : MonoBehaviour
 {
     public bool player1;
+    public GameObject bulletPreFab;
+
+    private float chargeShot=0;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +51,35 @@ public class GunScript : MonoBehaviour
             {
                 transform.up = new Vector2(-1, 1);
             }
+            if (Input.GetKey(KeyCode.V))
+            {
+                chargeShot += Time.deltaTime;
+                print("Charging");
+            }
+            else if(Input.GetKeyUp(KeyCode.V))
+            {
+                if (chargeShot > 0.1f)
+                {
+                    MoveForward bul = Instantiate(bulletPreFab, transform.position, transform.rotation).GetComponent<MoveForward>();
+                    if (chargeShot > 2)
+                    {
+                        bul.size = 0.5f;
+                        bul.speed = 2;
+                    }
+                    else if (chargeShot > 0.8f)
+                    {
+                        bul.size = 0.3f;
+                        bul.speed = 5;
+                    }
+                    else
+                    {
+                        bul.size = 0.1f;
+                        bul.speed = 7;
+                    }
+                }
+                chargeShot = 0;
+            }
+            
         }
         else
         {

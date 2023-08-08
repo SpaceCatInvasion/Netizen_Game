@@ -433,6 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1: 1
+  bulletPreFab: {fileID: 2925415430746585292, guid: ad60792690e42b244989cfdbf0fb6eba, type: 3}
 --- !u!1 &976036745
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1: 0
+  bulletPreFab: {fileID: 0}
 --- !u!1 &1576377535
 GameObject:
   m_ObjectHideFlags: 0
