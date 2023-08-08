@@ -21,10 +21,11 @@ public class PlayerController : MonoBehaviour
     public float dashSpeed;
     public float dashLength;
     public float stopDashDelay;
+    public bool fallThrough;
 
     //Private
     private float horizontalInput;
-    private bool onGround;
+	private bool onGround;
     private Rigidbody2D playerRb;
     private bool dashed=false;
     private float knockTimer=0;
@@ -55,7 +56,7 @@ public class PlayerController : MonoBehaviour
         {
             getPlayerDir(true);
             horizontalInput = Input.GetAxis("Horizontal");
-            jump(true);
+			jump(true);
             dash(true);
             move(true);
         }
@@ -63,7 +64,7 @@ public class PlayerController : MonoBehaviour
         {
             getPlayerDir(false);
             horizontalInput = Input.GetAxis("Horizontal2");
-            jump(false);
+			jump(false);
             dash(false);
             move(false);
         }
