@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 448734094}
   - component: {fileID: 448734093}
   - component: {fileID: 448734097}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player1
   m_TagString: Player1
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 701249941}
   - component: {fileID: 701249942}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 976036748}
   - component: {fileID: 976036747}
   - component: {fileID: 976036746}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player2
   m_TagString: Player2
   m_Icon: {fileID: 0}
@@ -597,7 +597,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1300158969}
   - component: {fileID: 1300158970}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1576377536}
   - component: {fileID: 1576377537}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -846,7 +846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2068959308}
   - component: {fileID: 2068959309}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
