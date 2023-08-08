@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class LaserTrigger : MonoBehaviour
 {
-    public Traps laserWall;
+    public GameObject laserWall;
+    private Traps script;
     // Start is called before the first frame update
     void Start()
     {
-        
+        script = laserWall.GetComponent<Traps>();
     }
 
     // Update is called once per frame
@@ -19,6 +20,6 @@ public class LaserTrigger : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        laserWall.laser();
+        script.laser();
     }
 }

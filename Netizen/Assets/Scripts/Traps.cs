@@ -28,6 +28,7 @@ public class Traps : MonoBehaviour
 
     public void laser()
     {
-        Instantiate(laserPrefab, new Vector3(0,2,0), Quaternion.LookRotation(new Vector2(-1,0)));
+        Instantiate(laserPrefab, new Vector3(0, 2, 0), Quaternion.LookRotation(new Vector2(0, 0)));
     }
+    //LookRotation(new Vector2(-1,0)));
 }
