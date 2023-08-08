@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading;
 using UnityEngine;
 
@@ -26,6 +27,9 @@ public class PlayerController : MonoBehaviour
     private bool onGround;
     private Rigidbody2D playerRb;
     private bool dashed=false;
+    private float knockTimer=0;
+    private GunScript gunScript;
+    private Vector2 knockDir;
 
     //Timers
     private float dashTimer = 0;
@@ -33,11 +37,20 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        gunScript = GetComponent<GunScript>();
+        if(player1)
+            Variables.player1 = gameObject;
+        else
+            Variables.player2 = gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (player1)
+            Variables.player1 = gameObject;
+        else
+            Variables.player2 = gameObject;
         if (player1)
         {
             getPlayerDir(true);
@@ -200,7 +213,12 @@ public class PlayerController : MonoBehaviour
     {
         if (p1)
         {
-            if (dashTimer > 0)
+            if (knockTimer>0)
+            {
+                playerRb.velocity = knockDir;
+                knockTimer -= Time.deltaTime;
+            }
+            else if (dashTimer > 0)
             {
                 if (Variables.player1Direction == 7) //Left Dash
                 {
@@ -248,7 +266,12 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (dashTimer > 0)
+            if (knockTimer > 0)
+            {
+                playerRb.velocity = knockDir;
+                knockTimer -= Time.deltaTime;
+            }
+            else if (dashTimer > 0)
             {
                 if (Variables.player2Direction == 7) //Left Dash
                 {
@@ -297,9 +320,19 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         onGround = true;
         dashed = false;
+    }
+    public void knockBack(Vector2 dir, float strength)
+    {
+        print("KNOCK");
+        knockDir = dir*80*Mathf.Log(strength+1);
+        knockTimer = strength;
+        if (knockTimer > 0.2f)
+        {
+            knockTimer = 0.2f;
+        }
     }
 }
