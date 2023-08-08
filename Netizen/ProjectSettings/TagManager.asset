@@ -4,8 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - teleport_enter
-  - teleport_exist
+  - Bullet
   layers:
   - Default
   - TransparentFX
