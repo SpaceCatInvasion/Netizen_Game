@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
     public float minX, maxX, minY, maxY;
 
     private Vector3 target;
-    private float smooth = 0.3f;
+    private float smooth = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
