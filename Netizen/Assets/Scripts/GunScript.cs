@@ -54,27 +54,27 @@ public class GunScript : MonoBehaviour
             if (Input.GetKey(KeyCode.V))
             {
                 chargeShot += Time.deltaTime;
-                print("Charging");
+                print(chargeShot);
             }
             else if(Input.GetKeyUp(KeyCode.V))
             {
                 if (chargeShot > 0.1f)
                 {
                     MoveForward bul = Instantiate(bulletPreFab, transform.position, transform.rotation).GetComponent<MoveForward>();
-                    if (chargeShot > 2)
+                    if (chargeShot > 1.4f)
                     {
-                        bul.size = 0.5f;
-                        bul.speed = 2;
+                        bul.size = 0.4f;
+                        bul.speed = 4;
                     }
-                    else if (chargeShot > 0.8f)
+                    else if (chargeShot > 0.7f)
                     {
-                        bul.size = 0.3f;
-                        bul.speed = 5;
+                        bul.size = 0.2f;
+                        bul.speed = 7;
                     }
                     else
                     {
                         bul.size = 0.1f;
-                        bul.speed = 7;
+                        bul.speed = 10;
                     }
                 }
                 chargeShot = 0;
@@ -114,6 +114,34 @@ public class GunScript : MonoBehaviour
             else if (Variables.player2Direction == 8) //Up Left
             {
                 transform.up = new Vector2(-1, 1);
+            }
+            if (Input.GetKey(KeyCode.Slash))
+            {
+                chargeShot += Time.deltaTime;
+                print(chargeShot);
+            }
+            else if (Input.GetKeyUp(KeyCode.Slash))
+            {
+                if (chargeShot > 0.1f)
+                {
+                    MoveForward bul = Instantiate(bulletPreFab, transform.position, transform.rotation).GetComponent<MoveForward>();
+                    if (chargeShot > 1.4f)
+                    {
+                        bul.size = 0.4f;
+                        bul.speed = 4;
+                    }
+                    else if (chargeShot > 0.7f)
+                    {
+                        bul.size = 0.2f;
+                        bul.speed = 7;
+                    }
+                    else
+                    {
+                        bul.size = 0.1f;
+                        bul.speed = 10;
+                    }
+                }
+                chargeShot = 0;
             }
         }
     }

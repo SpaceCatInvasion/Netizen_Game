@@ -20,4 +20,12 @@ public class MoveForward : MonoBehaviour
         transform.Translate(new Vector3(0, speed, 0)*Time.deltaTime);
         transform.localScale = new Vector3(size, size, size);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }
