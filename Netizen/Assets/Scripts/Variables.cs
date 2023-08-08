@@ -14,4 +14,5 @@ public class Variables : MonoBehaviour
     public static int UpLeft = 8;
     public static int player1Direction;
     public static int player2Direction;
+    public static bool p1Priority;
 }
