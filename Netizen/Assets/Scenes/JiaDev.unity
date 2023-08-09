@@ -320,7 +320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42742435}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.68, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -375,10 +375,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 210421000}
   player2: {fileID: 396749214}
-  minX: -150
-  maxX: 150
+  minX: -11.5
+  maxX: 11.5
   minY: 1.6
-  maxY: 20
+  maxY: 25
 --- !u!1 &63437916
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,7 +473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 69462144}
   - component: {fileID: 69462143}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,6 +622,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 247686461}
     m_Modifications:
+    - target: {fileID: 164106021120865767, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083048014981667214, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1398378936790998013, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.07
@@ -675,6 +683,10 @@ PrefabInstance:
       value: Laser Trap (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4741565927703952204, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741565927703952204, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -722,6 +734,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8690087397016054647, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
 --- !u!1 &210421000
@@ -762,7 +778,9 @@ MonoBehaviour:
   dashSpeed: 50
   dashLength: 0.08
   stopDashDelay: 0.05
-  fallThrough: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!61 &210421002
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -887,7 +905,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 247686461}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Traps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -953,7 +971,9 @@ MonoBehaviour:
   dashSpeed: 50
   dashLength: 0.08
   stopDashDelay: 0.05
-  fallThrough: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!61 &396749216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1081,6 +1101,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 247686461}
     m_Modifications:
+    - target: {fileID: 164106021120865767, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083048014981667214, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1398378936790998013, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.978
@@ -1134,6 +1162,10 @@ PrefabInstance:
       value: Laser Trap (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4741565927703952204, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741565927703952204, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -1181,6 +1213,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8690087397016054647, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
 --- !u!1 &566052397
@@ -1197,7 +1233,7 @@ GameObject:
   - component: {fileID: 566052401}
   - component: {fileID: 566052403}
   - component: {fileID: 566052402}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9652,6 +9688,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 247686461}
     m_Modifications:
+    - target: {fileID: 164106021120865767, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083048014981667214, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1398378936790998013, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.51
@@ -9728,6 +9772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser Trap (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4741565927703952204, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4741565927703952205, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -9772,6 +9820,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8690087397016054647, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
 --- !u!1 &1030373126
@@ -9789,7 +9841,7 @@ GameObject:
   - component: {fileID: 1030373131}
   - component: {fileID: 1030373130}
   - component: {fileID: 1030373133}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10455,6 +10507,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 247686461}
     m_Modifications:
+    - target: {fileID: 164106021120865767, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083048014981667214, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1398378936790998013, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5
@@ -10519,6 +10579,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser Trap (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4741565927703952204, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4741565927703952205, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -10563,6 +10627,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8690087397016054647, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
 --- !u!4 &1538582795 stripped
@@ -10582,6 +10650,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 247686461}
     m_Modifications:
+    - target: {fileID: 164106021120865767, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083048014981667214, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1398378936790998013, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.46
@@ -10646,6 +10722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser Trap
       objectReference: {fileID: 0}
+    - target: {fileID: 4741565927703952204, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4741565927703952205, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -10689,6 +10769,10 @@ PrefabInstance:
     - target: {fileID: 4741565927703952205, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690087397016054647, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
@@ -10889,6 +10973,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 247686461}
     m_Modifications:
+    - target: {fileID: 164106021120865767, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083048014981667214, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1398378936790998013, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.5
@@ -10965,6 +11057,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser Trap
       objectReference: {fileID: 0}
+    - target: {fileID: 4741565927703952204, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4741565927703952205, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -11008,6 +11104,10 @@ PrefabInstance:
     - target: {fileID: 4741565927703952205, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690087397016054647, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d68f195582866464fbf8f28bd1886cf7, type: 3}
