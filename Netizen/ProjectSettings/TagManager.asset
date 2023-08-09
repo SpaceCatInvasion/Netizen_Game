@@ -8,6 +8,7 @@ TagManager:
   - Player1
   - Player2
   - RespawnPoint
+  - RespawnTrigger
   layers:
   - Default
   - TransparentFX
@@ -47,4 +48,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Deco
+    uniqueID: 1090882975
     locked: 0

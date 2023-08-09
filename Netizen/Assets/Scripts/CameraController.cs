@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
     public float minX, maxX, minY, maxY;
 
     private Vector3 target;
-    private float smooth = 0.1f;
+    private float smooth = 4f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +19,21 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        target = (player1.transform.position + player2.transform.position) / 2;
-        transform.position = Vector3.Lerp(transform.position, target, smooth);
+
+		if (Variables.noPriority)
+		{
+			target = (player1.transform.position + player2.transform.position) / 2;
+		}
+		else if (Variables.p1Priority)
+        {
+            target = player1.transform.position;
+        }
+        else if (!Variables.p1Priority)
+        {
+            target = player2.transform.position;
+        }
+        
+        transform.position = Vector3.Lerp(transform.position, target, smooth * Time.deltaTime);
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX),  Mathf.Clamp(transform.position.y, minY, maxY), -10);
     }
 }

@@ -135,7 +135,6 @@ public class GunScript : MonoBehaviour
             if (Input.GetKey(KeyCode.Slash))
             {
                 chargeShot += Time.deltaTime;
-                print(chargeShot);
             }
             else if (Input.GetKeyUp(KeyCode.Slash))
             {
