@@ -27,7 +27,10 @@ public class TrapTrigger : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        trapDoor.SetActive(false);
-        respawnTimer = 5;
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            trapDoor.SetActive(false);
+            respawnTimer = 5;
+        }
     }
 }
