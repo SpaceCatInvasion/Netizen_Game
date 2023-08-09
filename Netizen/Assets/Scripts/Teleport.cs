@@ -30,12 +30,12 @@ public class Teleport : MonoBehaviour
         {
             if (telep)
             {
-                player1.transform.position = tp2.transform.position;
+                player1.transform.position = tp2.transform.position+new Vector3(0,1,0);
                 timer = 0.5f;
             }
             else
             {
-                player1.transform.position = tp1.transform.position;
+                player1.transform.position = tp1.transform.position + new Vector3(0, 1, 0);
                 timer = 0.5f;
             }
         }
@@ -43,12 +43,12 @@ public class Teleport : MonoBehaviour
         {
             if (telep)
             {
-                player2.transform.position = tp2.transform.position;
+                player2.transform.position = tp2.transform.position + new Vector3(0, 1, 0);
                 timer = 0.5f;
             }
             else
             {
-                player2.transform.position = tp1.transform.position;
+                player2.transform.position = tp1.transform.position + new Vector3(0, 1, 0);
                 timer = 0.5f;
             }
         }
