@@ -23,13 +23,15 @@ public class Teleporters : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player1"))
             {
-                mainScript.teleport(true);
                 mainScript.telep = tele;
+                mainScript.teleport(true);
+                
             }
             else if (collision.gameObject.CompareTag("Player2"))
             {
-                mainScript.teleport(false);
                 mainScript.telep = tele;
+                mainScript.teleport(false);
+                
             }
         }
         // transform.position = new Vector2(transform.position.x -9, transform.position.y + 0);

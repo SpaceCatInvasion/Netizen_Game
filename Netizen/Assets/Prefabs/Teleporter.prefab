@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8621703743735414165}
   - component: {fileID: 8621703743735414171}
   - component: {fileID: 8621703743735414168}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Teleport Enter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 8621703743996081062}
   - component: {fileID: 8621703743996081061}
   - component: {fileID: 8621703743996081066}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Teleport Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8621703744092374391}
   - component: {fileID: 8621703744092374390}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Teleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
