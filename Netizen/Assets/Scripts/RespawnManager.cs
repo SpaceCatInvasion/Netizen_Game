@@ -36,9 +36,9 @@ public class RespawnManager : MonoBehaviour
                 {
                     continue;
                 }
-                if(lowestDist>Vector3.Distance(Variables.player1.transform.position, respawnPoints[i].transform.position))
+                if(lowestDist>Vector3.Distance(Variables.player2.transform.position, respawnPoints[i].transform.position))
                 {
-                    lowestDist = Vector3.Distance(Variables.player1.transform.position, respawnPoints[i].transform.position);
+                    lowestDist = Vector3.Distance(Variables.player2.transform.position, respawnPoints[i].transform.position);
                     index = i;
                 }
             }
@@ -59,9 +59,9 @@ public class RespawnManager : MonoBehaviour
                 {
                     continue;
                 }
-                if (lowestDist > Vector3.Distance(Variables.player2.transform.position, respawnPoints[i].transform.position))
+                if (lowestDist > Vector3.Distance(Variables.player1.transform.position, respawnPoints[i].transform.position))
                 {
-                    lowestDist = Vector3.Distance(Variables.player2.transform.position, respawnPoints[i].transform.position);
+                    lowestDist = Vector3.Distance(Variables.player1.transform.position, respawnPoints[i].transform.position);
                     index = i;
                 }
             }
