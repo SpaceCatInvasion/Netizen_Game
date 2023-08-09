@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Floor : MonoBehaviour
+public class CrumblingFloor : MonoBehaviour
 {
     private float crumbleTimer=-1;
+    public float respawnTime = 3;
     public FloorTimer timer;
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class Floor : MonoBehaviour
         }
         else if(crumbleTimer > -1)
         {
-            timer.timer = 8;
+            timer.timer = respawnTime;
             crumbleTimer = -1;
             gameObject.SetActive(false);
         }
