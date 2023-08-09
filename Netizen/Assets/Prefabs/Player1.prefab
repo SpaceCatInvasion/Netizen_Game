@@ -201,7 +201,9 @@ MonoBehaviour:
   dashSpeed: 50
   dashLength: 0.08
   stopDashDelay: 0.05
-  fallThrough: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!1 &8377544313363746746
 GameObject:
   m_ObjectHideFlags: 0

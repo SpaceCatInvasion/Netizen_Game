@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public float dashLength;
     public float stopDashDelay;
     public LayerMask groundLayer;
+    public RespawnManager RespawnManager;
 
     //Private
     private float horizontalInput;
@@ -357,6 +358,21 @@ public class PlayerController : MonoBehaviour
         if (knockTimer > 0.2f)
         {
             knockTimer = 0.2f;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("RespawnTrigger"))
+        {
+            if (player1)
+            {
+                RespawnManager.p1Respawn = true;
+            }
+            else
+            {
+                RespawnManager.p2Respawn = true;
+            }
+            gameObject.SetActive(false);
         }
     }
 }
