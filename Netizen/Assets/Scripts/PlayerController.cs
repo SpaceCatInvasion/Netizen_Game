@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
 
     //Timers
     private float dashTimer = 0;
+    private float regenJump = 0;
+    private float regenDash = 0;
 
     void Start()
     {
@@ -68,6 +70,8 @@ public class PlayerController : MonoBehaviour
             dash(false);
             move(false);
         }
+        regenJump -= Time.deltaTime;
+        regenDash -= Time.deltaTime;
     }
 
     //Functions
@@ -80,6 +84,7 @@ public class PlayerController : MonoBehaviour
             {
                 playerRb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
                 onGround = false;
+                regenJump = 0.1f;
             }
         }
         else
@@ -88,6 +93,7 @@ public class PlayerController : MonoBehaviour
             {
                 playerRb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
                 onGround = false;
+                regenJump = 0.1f;
             }
         }
     }
@@ -101,6 +107,7 @@ public class PlayerController : MonoBehaviour
                 {
                     dashTimer = dashLength;
                     dashed = true;
+                    regenDash = 0.1f;
                 }
             }
             else
@@ -109,6 +116,7 @@ public class PlayerController : MonoBehaviour
                 {
                     dashTimer = dashLength;
                     dashed = true;
+                    regenDash = 0.1f;
                 }
             }
         }
@@ -323,8 +331,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        onGround = true;
-        dashed = false;
+        if (regenJump <= 0)
+        {
+            onGround = true;
+        }
+        if (regenDash <= 0)
+        {
+            dashed = false;
+        }
     }
     public void knockBack(Vector2 dir, float strength)
     {
