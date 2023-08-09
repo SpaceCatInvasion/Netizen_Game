@@ -52,3 +52,6 @@ TagManager:
   - name: Deco
     uniqueID: 1090882975
     locked: 0
+  - name: Player
+    uniqueID: 1770712367
+    locked: 0
