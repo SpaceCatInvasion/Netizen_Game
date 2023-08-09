@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FloorTimer : MonoBehaviour
 {
-    public float timer=-1;
+    public float timer = -1;
     public GameObject floor;
     // Start is called before the first frame update
     void Start()
