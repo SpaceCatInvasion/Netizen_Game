@@ -24,7 +24,7 @@ public class LaserScript : MonoBehaviour
             timer = -1;
             gameObject.SetActive(false);
         }
-        print("Timer: "+timer);
+        //print("Timer: "+timer);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
