@@ -15,6 +15,7 @@ public class Variables : MonoBehaviour
     public static int player1Direction;
     public static int player2Direction;
     public static bool p1Priority;
+    public static bool noPriority = true;
     public static GameObject player1;
     public static GameObject player2;
 }
