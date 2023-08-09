@@ -20,7 +20,7 @@ public class MoveForward : MonoBehaviour
     {
         transform.Translate(new Vector3(0, speed, 0)*Time.deltaTime);
         transform.localScale = new Vector3(size, size, size);
-        if (Vector2.Distance(transform.position, Variables.player1.transform.position) > 20 || Vector2.Distance(transform.position, Variables.player2.transform.position) > 20)
+        if (Vector2.Distance(transform.position, Variables.player1.transform.position) > 25 || Vector2.Distance(transform.position, Variables.player2.transform.position) > 25)
         {
             Destroy(gameObject);
         }

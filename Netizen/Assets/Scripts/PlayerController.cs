@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public float dashSpeed;
     public float dashLength;
     public float stopDashDelay;
-    public bool fallThrough;
+    public LayerMask groundLayer;
 
     //Private
     private float horizontalInput;
@@ -72,7 +72,17 @@ public class PlayerController : MonoBehaviour
         }
         regenJump -= Time.deltaTime;
         regenDash -= Time.deltaTime;
-    }
+
+		if (regenJump <= 0)
+		{
+            //Ray2D jumpRay = new Ray2D(transform.position, Vector2.down);
+            RaycastHit2D jumpRay = Physics2D.Raycast(transform.position, Vector2.down, 1f, groundLayer);
+            if(jumpRay.collider != null)
+            {
+				onGround = true;
+			}
+		}
+	}
 
     //Functions
 
@@ -331,10 +341,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (regenJump <= 0)
-        {
-            onGround = true;
-        }
+        
         if (regenDash <= 0)
         {
             dashed = false;

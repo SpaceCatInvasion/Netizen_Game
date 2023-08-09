@@ -63,7 +63,6 @@ public class GunScript : MonoBehaviour
             if (Input.GetKey(KeyCode.V))
             {
                 chargeShot += Time.deltaTime;
-                print(chargeShot);
             }
             else if(Input.GetKeyUp(KeyCode.V))
             {
