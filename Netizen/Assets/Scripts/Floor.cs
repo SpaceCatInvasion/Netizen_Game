@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Floor : MonoBehaviour
 {
-    public Traps floor;
-
+    private float crumbleTimer=-1;
+    public FloorTimer timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +15,24 @@ public class Floor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(crumbleTimer > 0)
+        {
+            crumbleTimer -= Time.deltaTime;
+        }
+        else if(crumbleTimer > -1)
+        {
+            timer.timer = 8;
+            crumbleTimer = -1;
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        floor.crumble();
+        if (crumbleTimer==-1)
+        {
+            crumbleTimer = 1.5f;
+        }
+        
     }
 }

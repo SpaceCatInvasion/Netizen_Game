@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                if (Input.GetKeyDown(KeyCode.B)) //p2 dash
+                if (Input.GetKeyDown(KeyCode.N)) //p2 dash
                 {
                     dashTimer = dashLength;
                     dashed = true;

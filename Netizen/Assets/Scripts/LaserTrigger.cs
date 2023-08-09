@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class LaserTrigger : MonoBehaviour
 {
-    public GameObject laserWall;
-    private Traps script;
+    public GameObject laser;
+    private LaserScript script;
     // Start is called before the first frame update
     void Start()
     {
-        script = laserWall.GetComponent<Traps>();
+        script = laser.GetComponent<LaserScript>();
     }
 
     // Update is called once per frame
@@ -20,6 +20,10 @@ public class LaserTrigger : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        script.laser();
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            laser.SetActive(true);
+            script.timer = 3;
+        }
     }
 }
