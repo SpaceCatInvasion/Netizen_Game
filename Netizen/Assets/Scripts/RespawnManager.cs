@@ -12,6 +12,7 @@ public class RespawnManager : MonoBehaviour
 
     private int index = 0;
     private float lowestDist = 10000000000;
+    private float respawnTime = 0.1f;
     private float p1Timer = -1;
     private float p2Timer = -1;
     // Start is called before the first frame update
@@ -44,7 +45,7 @@ public class RespawnManager : MonoBehaviour
             }
             Variables.player1.transform.position = respawnPoints[index].transform.position;
             p1Respawn = false;
-            p1Timer = 0.3f;
+            p1Timer = respawnTime;
         }
         if (p2Respawn)
         {
@@ -67,7 +68,7 @@ public class RespawnManager : MonoBehaviour
             }
             Variables.player2.transform.position = respawnPoints[index].transform.position;
             p2Respawn = false;
-            p2Timer = 0.3f;
+            p2Timer = respawnTime;
         }
         if (p1Timer > 0)
         {
