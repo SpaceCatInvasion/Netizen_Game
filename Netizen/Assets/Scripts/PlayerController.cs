@@ -352,6 +352,8 @@ public class PlayerController : MonoBehaviour
         print("KNOCK");
         knockDir = dir*80*Mathf.Log(strength+1);
         knockTimer = strength;
+        Variables.p1Priority = !player1;
+        Variables.noPriority = false;
         if (knockTimer > 0.2f)
         {
             knockTimer = 0.2f;
