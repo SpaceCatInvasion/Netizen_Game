@@ -30,20 +30,18 @@ public class MoveForward : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Destroy(collision.gameObject);
-            Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Player1"))
         {
             PlayerController script = Variables.player1.gameObject.GetComponent<PlayerController>();
             script.knockBack(dir,size);
-            Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Player2"))
         {
             PlayerController script = Variables.player2.gameObject.GetComponent<PlayerController>();
             script.knockBack(dir, size);
             print("knock");
-            Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 }

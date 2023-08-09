@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrapManager : MonoBehaviour
+public class Traps : MonoBehaviour
 {
     public GameObject laserPrefab;
     // Start is called before the first frame update
