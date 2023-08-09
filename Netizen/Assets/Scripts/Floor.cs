@@ -5,6 +5,7 @@ using UnityEngine;
 public class Floor : MonoBehaviour
 {
     private float crumbleTimer=-1;
+    public FloorTimer timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,13 +21,18 @@ public class Floor : MonoBehaviour
         }
         else if(crumbleTimer > -1)
         {
+            timer.timer = 8;
+            crumbleTimer = -1;
             gameObject.SetActive(false);
-            crumbleTimer = - 1;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        crumbleTimer = 1.5f;
+        if (crumbleTimer==-1)
+        {
+            crumbleTimer = 1.5f;
+        }
+        
     }
 }

@@ -40,7 +40,6 @@ public class MoveForward : MonoBehaviour
         {
             PlayerController script = Variables.player2.gameObject.GetComponent<PlayerController>();
             script.knockBack(dir, size);
-            print("knock");
         }
         Destroy(gameObject);
     }
