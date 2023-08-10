@@ -33,11 +33,13 @@ public class MoveForward : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Player1"))
         {
+            print("Hit p1");
             PlayerController script = Variables.player1.gameObject.GetComponent<PlayerController>();
             script.knockBack(dir,size);
         }
         else if (collision.gameObject.CompareTag("Player2"))
         {
+            print("Hit p2");
             PlayerController script = Variables.player2.gameObject.GetComponent<PlayerController>();
             script.knockBack(dir, size);
         }

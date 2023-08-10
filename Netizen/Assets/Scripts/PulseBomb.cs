@@ -7,10 +7,11 @@ public class PulseBomb : MonoBehaviour
     public float radius;
     public bool pulseAway;
     public float strength;
+    public AudioSource pulseSource;
     // Start is called before the first frame update
     void Start()
     {
-        
+        pulseSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,6 +26,7 @@ public class PulseBomb : MonoBehaviour
             print("Collide");
             if (pulseAway)
             {
+                pulseSource.Play();
                 float p1Dist = Vector3.Distance(transform.position, Variables.player1.transform.position);
                 float p2Dist = Vector3.Distance(transform.position, Variables.player2.transform.position);
                 if (p1Dist < radius)
@@ -48,6 +50,7 @@ public class PulseBomb : MonoBehaviour
             }
             else
             {
+                pulseSource.Play();
                 float p1Dist = Vector3.Distance(transform.position, Variables.player1.transform.position);
                 float p2Dist = Vector3.Distance(transform.position, Variables.player2.transform.position);
                 if (p1Dist < radius)
