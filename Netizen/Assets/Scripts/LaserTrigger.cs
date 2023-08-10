@@ -6,10 +6,12 @@ public class LaserTrigger : MonoBehaviour
 {
     public GameObject laser;
     private LaserScript script;
+    public AudioSource laserSource;
     // Start is called before the first frame update
     void Start()
     {
         script = laser.GetComponent<LaserScript>();
+        laserSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class LaserTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            laserSource.Play();
             laser.SetActive(true);
             script.timer = 3;
         }
