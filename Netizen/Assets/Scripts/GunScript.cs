@@ -18,147 +18,150 @@ public class GunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player1)
+        if (Variables.startedGame)
         {
-            if (Variables.player1Direction == 7) //Left
+            if (player1)
             {
-                dir = new Vector2(-1, 0);
-                transform.up = dir;
-            }
-            else if (Variables.player1Direction == 5) //Down
-            {
-                dir= new Vector2(0, -1);
-                transform.up = dir;
-            }
-            else if (Variables.player1Direction == 3) //Right
-            {
-                dir = new Vector2(1, 0);
-                transform.up = dir;
-            }
-            else if (Variables.player1Direction == 1) //Up
-            {
-                dir= new Vector2(0, 1);
-                transform.up = dir;
-            }
-            else if (Variables.player1Direction == 2) //Up Right
-            {
-                dir = new Vector2(1, 1);
-                transform.up = dir;
-            }
-            else if (Variables.player1Direction == 4) //Down Right
-            {
-                dir= new Vector2(1, -1);
-                transform.up = dir;
-            }
-            else if (Variables.player1Direction == 6) //Down Left
-            {
-                dir= new Vector2(-1, -1);
-                transform.up = dir;
-            }
-            else if (Variables.player1Direction == 8) //Up Left
-            {
-                dir= new Vector2(-1, 1);
-                transform.up = dir;
-            }
-            if (Input.GetKey(KeyCode.V))
-            {
-                chargeShot += Time.deltaTime;
-            }
-            else if(Input.GetKeyUp(KeyCode.V))
-            {
-                if (chargeShot > 0.1f)
+                if (Variables.player1Direction == 7) //Left
                 {
-                    MoveForward bul = Instantiate(bulletPreFab, transform.position+new Vector3(dir.x,dir.y,0), transform.rotation).GetComponent<MoveForward>();
-                    bul.dir = dir;
-                    if (chargeShot > 1.4f)
-                    {
-                        bul.size = 0.4f;
-                        bul.speed = 4;
-                    }
-                    else if (chargeShot > 0.7f)
-                    {
-                        bul.size = 0.2f;
-                        bul.speed = 7;
-                    }
-                    else
-                    {
-                        bul.size = 0.1f;
-                        bul.speed = 10;
-                    }
+                    dir = new Vector2(-1, 0);
+                    transform.up = dir;
                 }
-                chargeShot = 0;
-            }
-            
-        }
-        else
-        {
-            if (Variables.player2Direction == 7) //Left
-            {
-                dir = new Vector2(-1, 0);
-                transform.up = dir;
-            }
-            else if (Variables.player2Direction == 5) //Down
-            {
-                dir = new Vector2(0, -1);
-                transform.up = dir;
-            }
-            else if (Variables.player2Direction == 3) //Right
-            {
-                dir = new Vector2(1, 0);
-                transform.up = dir;
-            }
-            else if (Variables.player2Direction == 1) //Up
-            {
-                dir = new Vector2(0, 1);
-                transform.up = dir;
-            }
-            else if (Variables.player2Direction == 2) //Up Right
-            {
-                dir = new Vector2(1, 1);
-                transform.up = dir;
-            }
-            else if (Variables.player2Direction == 4) //Down Right
-            {
-                dir = new Vector2(1, -1);
-                transform.up = dir;
-            }
-            else if (Variables.player2Direction == 6) //Down Left
-            {
-                dir = new Vector2(-1, -1);
-                transform.up = dir;
-            }
-            else if (Variables.player2Direction == 8) //Up Left
-            {
-                dir = new Vector2(-1, 1);
-                transform.up = dir;
-            }
-            if (Input.GetKey(KeyCode.Slash))
-            {
-                chargeShot += Time.deltaTime;
-            }
-            else if (Input.GetKeyUp(KeyCode.Slash))
-            {
-                if (chargeShot > 0.1f)
+                else if (Variables.player1Direction == 5) //Down
                 {
-                    MoveForward bul = Instantiate(bulletPreFab, transform.position+new Vector3(dir.x,dir.y,0), transform.rotation).GetComponent<MoveForward>();
-                    bul.dir = dir;
-                    if (chargeShot > 1.4f)
-                    {
-                        bul.size = 0.4f;
-                        bul.speed = 4;
-                    }
-                    else if (chargeShot > 0.7f)
-                    {
-                        bul.size = 0.2f;
-                        bul.speed = 7;
-                    }
-                    else
-                    {
-                        bul.size = 0.1f;
-                        bul.speed = 10;
-                    }
+                    dir = new Vector2(0, -1);
+                    transform.up = dir;
                 }
-                chargeShot = 0;
+                else if (Variables.player1Direction == 3) //Right
+                {
+                    dir = new Vector2(1, 0);
+                    transform.up = dir;
+                }
+                else if (Variables.player1Direction == 1) //Up
+                {
+                    dir = new Vector2(0, 1);
+                    transform.up = dir;
+                }
+                else if (Variables.player1Direction == 2) //Up Right
+                {
+                    dir = new Vector2(1, 1);
+                    transform.up = dir;
+                }
+                else if (Variables.player1Direction == 4) //Down Right
+                {
+                    dir = new Vector2(1, -1);
+                    transform.up = dir;
+                }
+                else if (Variables.player1Direction == 6) //Down Left
+                {
+                    dir = new Vector2(-1, -1);
+                    transform.up = dir;
+                }
+                else if (Variables.player1Direction == 8) //Up Left
+                {
+                    dir = new Vector2(-1, 1);
+                    transform.up = dir;
+                }
+                if (Input.GetKey(KeyCode.V))
+                {
+                    chargeShot += Time.deltaTime;
+                }
+                else if (Input.GetKeyUp(KeyCode.V))
+                {
+                    if (chargeShot > 0.1f)
+                    {
+                        MoveForward bul = Instantiate(bulletPreFab, transform.position + new Vector3(dir.x, dir.y, 0), transform.rotation).GetComponent<MoveForward>();
+                        bul.dir = dir;
+                        if (chargeShot > 1.4f)
+                        {
+                            bul.size = 0.4f;
+                            bul.speed = 4;
+                        }
+                        else if (chargeShot > 0.7f)
+                        {
+                            bul.size = 0.2f;
+                            bul.speed = 7;
+                        }
+                        else
+                        {
+                            bul.size = 0.1f;
+                            bul.speed = 10;
+                        }
+                    }
+                    chargeShot = 0;
+                }
+
+            }
+            else
+            {
+                if (Variables.player2Direction == 7) //Left
+                {
+                    dir = new Vector2(-1, 0);
+                    transform.up = dir;
+                }
+                else if (Variables.player2Direction == 5) //Down
+                {
+                    dir = new Vector2(0, -1);
+                    transform.up = dir;
+                }
+                else if (Variables.player2Direction == 3) //Right
+                {
+                    dir = new Vector2(1, 0);
+                    transform.up = dir;
+                }
+                else if (Variables.player2Direction == 1) //Up
+                {
+                    dir = new Vector2(0, 1);
+                    transform.up = dir;
+                }
+                else if (Variables.player2Direction == 2) //Up Right
+                {
+                    dir = new Vector2(1, 1);
+                    transform.up = dir;
+                }
+                else if (Variables.player2Direction == 4) //Down Right
+                {
+                    dir = new Vector2(1, -1);
+                    transform.up = dir;
+                }
+                else if (Variables.player2Direction == 6) //Down Left
+                {
+                    dir = new Vector2(-1, -1);
+                    transform.up = dir;
+                }
+                else if (Variables.player2Direction == 8) //Up Left
+                {
+                    dir = new Vector2(-1, 1);
+                    transform.up = dir;
+                }
+                if (Input.GetKey(KeyCode.Slash))
+                {
+                    chargeShot += Time.deltaTime;
+                }
+                else if (Input.GetKeyUp(KeyCode.Slash))
+                {
+                    if (chargeShot > 0.1f)
+                    {
+                        MoveForward bul = Instantiate(bulletPreFab, transform.position + new Vector3(dir.x, dir.y, 0), transform.rotation).GetComponent<MoveForward>();
+                        bul.dir = dir;
+                        if (chargeShot > 1.4f)
+                        {
+                            bul.size = 0.4f;
+                            bul.speed = 4;
+                        }
+                        else if (chargeShot > 0.7f)
+                        {
+                            bul.size = 0.2f;
+                            bul.speed = 7;
+                        }
+                        else
+                        {
+                            bul.size = 0.1f;
+                            bul.speed = 10;
+                        }
+                    }
+                    chargeShot = 0;
+                }
             }
         }
     }
