@@ -14,7 +14,10 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Variables.startedGame)
+        {
+            startGameScreen.SetActive(false);
+        }
     }
     public void startGame()
     {

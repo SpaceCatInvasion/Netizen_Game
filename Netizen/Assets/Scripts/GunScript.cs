@@ -6,13 +6,14 @@ public class GunScript : MonoBehaviour
 {
     public bool player1;
     public GameObject bulletPreFab;
+    public AudioSource gunSource;
 
     private Vector2 dir;
     private float chargeShot=0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gunSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -70,6 +71,7 @@ public class GunScript : MonoBehaviour
                 {
                     if (chargeShot > 0.05f)
                     {
+                        gunSource.Play();
                         MoveForward bul = Instantiate(bulletPreFab, transform.position + new Vector3(dir.x, dir.y, 0), transform.rotation).GetComponent<MoveForward>();
                         bul.dir = dir;
                         if (chargeShot > 1.4f)
@@ -142,6 +144,7 @@ public class GunScript : MonoBehaviour
                 {
                     if (chargeShot > 0.05f)
                     {
+                        gunSource.Play();
                         MoveForward bul = Instantiate(bulletPreFab, transform.position + new Vector3(dir.x, dir.y, 0), transform.rotation).GetComponent<MoveForward>();
                         bul.dir = dir;
                         if (chargeShot > 1.4f)
