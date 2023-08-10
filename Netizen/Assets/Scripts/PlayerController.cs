@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public float stopDashDelay;
     public LayerMask groundLayer;
     public RespawnManager RespawnManager;
+    public AudioSource jumpSource;
 
     //Private
     private float horizontalInput;
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        jumpSource = GetComponent<AudioSource>();
         playerRb = GetComponent<Rigidbody2D>();
         gunScript = GetComponent<GunScript>();
         if(player1)
@@ -96,6 +98,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.C) && onGround) // p1 Jump
             {
+                jumpSource.Play();
                 playerRb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
                 onGround = false;
                 regenJump = 0.1f;
@@ -105,6 +108,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Period) && onGround) // p2 Jump
             {
+                jumpSource.Play();
                 playerRb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
                 onGround = false;
                 regenJump = 0.1f;
