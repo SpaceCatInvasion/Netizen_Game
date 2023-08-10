@@ -342,7 +342,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        
         if (regenDash <= 0)
         {
             dashed = false;
