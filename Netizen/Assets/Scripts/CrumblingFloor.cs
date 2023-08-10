@@ -7,10 +7,11 @@ public class CrumblingFloor : MonoBehaviour
     private float crumbleTimer=-1;
     public float respawnTime = 3;
     public FloorTimer timer;
+    public Animator crumble;
     // Start is called before the first frame update
     void Start()
     {
-        
+        crumble = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -33,6 +34,8 @@ public class CrumblingFloor : MonoBehaviour
         if (crumbleTimer==-1)
         {
             crumbleTimer = 1.5f;
+            crumble.SetTrigger("animateCrumble");
+            crumble.SetFloat("crumbleSpeed", crumbleTimer);
         }
         
     }
