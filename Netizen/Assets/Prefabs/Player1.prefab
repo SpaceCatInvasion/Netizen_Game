@@ -155,8 +155,9 @@ MonoBehaviour:
   stopDashDelay: 0.05
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1088
   RespawnManager: {fileID: 0}
+  knockTimer: 0
 --- !u!1001 &2641507990230746587
 PrefabInstance:
   m_ObjectHideFlags: 0
