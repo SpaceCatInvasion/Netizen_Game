@@ -16301,19 +16301,19 @@ PrefabInstance:
     - target: {fileID: 2737340064234312494, guid: 01d3ab25809e5a24ebecd044bf670870, type: 3}
       propertyPath: leftRespawnAttack
       value: 
-      objectReference: {fileID: 627826863}
+      objectReference: {fileID: 514840108}
     - target: {fileID: 2737340064234312494, guid: 01d3ab25809e5a24ebecd044bf670870, type: 3}
       propertyPath: leftRespawnDefend
       value: 
-      objectReference: {fileID: 1652388177}
+      objectReference: {fileID: 1049898846}
     - target: {fileID: 2737340064234312494, guid: 01d3ab25809e5a24ebecd044bf670870, type: 3}
       propertyPath: rightRespawnAttack
       value: 
-      objectReference: {fileID: 514840108}
+      objectReference: {fileID: 627826863}
     - target: {fileID: 2737340064234312494, guid: 01d3ab25809e5a24ebecd044bf670870, type: 3}
       propertyPath: rightRespawnDefend
       value: 
-      objectReference: {fileID: 1049898846}
+      objectReference: {fileID: 1652388177}
     - target: {fileID: 2737340064234312494, guid: 01d3ab25809e5a24ebecd044bf670870, type: 3}
       propertyPath: respawnPoints.Array.size
       value: 14

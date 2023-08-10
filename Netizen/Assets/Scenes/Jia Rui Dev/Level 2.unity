@@ -9109,7 +9109,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 143889113064267989, guid: a201bf4875118d84b88d74cdf8861c18, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.8786
+      value: 2.56
       objectReference: {fileID: 0}
     - target: {fileID: 143889113064267989, guid: a201bf4875118d84b88d74cdf8861c18, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9627,7 +9627,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 143889113064267989, guid: a201bf4875118d84b88d74cdf8861c18, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.3827
+      value: 4.88
       objectReference: {fileID: 0}
     - target: {fileID: 143889113064267989, guid: a201bf4875118d84b88d74cdf8861c18, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23292,7 +23292,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837881272}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.9877, y: 17.2, z: 0}
+  m_LocalPosition: {x: 10.54, y: 17.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23335,6 +23335,7 @@ MonoBehaviour:
   respawnTime: 3
   timer: {fileID: 303704258}
   crumble: {fileID: 0}
+  crumbelSource: {fileID: 0}
 --- !u!61 &1837881276
 BoxCollider2D:
   m_ObjectHideFlags: 0
