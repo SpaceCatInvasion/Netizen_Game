@@ -17190,11 +17190,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3972710007888425538, guid: a201bf4875118d84b88d74cdf8861c18, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.1
+      value: 32.1
       objectReference: {fileID: 0}
     - target: {fileID: 3972710007888425538, guid: a201bf4875118d84b88d74cdf8861c18, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.12
+      value: 9.12
       objectReference: {fileID: 0}
     - target: {fileID: 3972710007888425538, guid: a201bf4875118d84b88d74cdf8861c18, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17239,6 +17239,14 @@ PrefabInstance:
     - target: {fileID: 6014117886739676027, guid: a201bf4875118d84b88d74cdf8861c18, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948215423296240269, guid: a201bf4875118d84b88d74cdf8861c18, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 5.223633
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948215423296240269, guid: a201bf4875118d84b88d74cdf8861c18, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.66210717
       objectReference: {fileID: 0}
     - target: {fileID: 8986689127780729133, guid: a201bf4875118d84b88d74cdf8861c18, type: 3}
       propertyPath: m_Layer
@@ -18987,6 +18995,14 @@ PrefabInstance:
     - target: {fileID: 7970959671145495377, guid: b4dad707f375d6646b3302a7ee09641a, type: 3}
       propertyPath: m_Name
       value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970959671145495378, guid: b4dad707f375d6646b3302a7ee09641a, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970959671145495378, guid: b4dad707f375d6646b3302a7ee09641a, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1770712367
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4dad707f375d6646b3302a7ee09641a, type: 3}
@@ -51711,6 +51727,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 504353616}
     m_Modifications:
+    - target: {fileID: 27874389525728809, guid: 75ea9bf02b7e053438e1236e77711746, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 27874389525728809, guid: 75ea9bf02b7e053438e1236e77711746, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1770712367
+      objectReference: {fileID: 0}
     - target: {fileID: 27874389525728810, guid: 75ea9bf02b7e053438e1236e77711746, type: 3}
       propertyPath: m_RootOrder
       value: 5
