@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 	private bool onGround;
     private Rigidbody2D playerRb;
     private bool dashed=false;
-    private float knockTimer=0;
+    public float knockTimer=0;
     private GunScript gunScript;
     private Vector2 knockDir;
 
