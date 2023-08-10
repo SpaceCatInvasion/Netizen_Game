@@ -9,13 +9,16 @@ public class Teleport : MonoBehaviour
     public GameObject tp1;
     public GameObject tp2;
     public bool telep;
-    public GameObject player1;
-    public GameObject player2;
+    private GameObject player1 = Variables.player1;
+    private GameObject player2 = Variables.player2;
     public float timer = 0;
+    public AudioSource teleportSource;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        teleportSource = GetComponent <AudioSource>(); 
     }
 
     // Update is called once per frame
@@ -30,11 +33,13 @@ public class Teleport : MonoBehaviour
         {
             if (telep)
             {
+                teleportSource.Play();
                 player1.transform.position = tp2.transform.position+new Vector3(0,1,0);
                 timer = 0.5f;
             }
             else
             {
+                teleportSource.Play();
                 player1.transform.position = tp1.transform.position + new Vector3(0, 1, 0);
                 timer = 0.5f;
             }
@@ -43,11 +48,13 @@ public class Teleport : MonoBehaviour
         {
             if (telep)
             {
+                teleportSource.Play();
                 player2.transform.position = tp2.transform.position + new Vector3(0, 1, 0);
                 timer = 0.5f;
             }
             else
             {
+                teleportSource.Play();
                 player2.transform.position = tp1.transform.position + new Vector3(0, 1, 0);
                 timer = 0.5f;
             }

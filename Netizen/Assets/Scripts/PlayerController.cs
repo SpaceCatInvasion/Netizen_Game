@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 	private bool onGround;
     private Rigidbody2D playerRb;
     private bool dashed=false;
-    private float knockTimer=0;
+    public float knockTimer=0;
     private GunScript gunScript;
     private Vector2 knockDir;
 
@@ -51,38 +51,41 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player1)
-            Variables.player1 = gameObject;
-        else
-            Variables.player2 = gameObject;
-        if (player1)
+        if (Variables.startedGame)
         {
-            getPlayerDir(true);
-            horizontalInput = Input.GetAxis("Horizontal");
-			jump(true);
-            dash(true);
-            move(true);
-        }
-        else
-        {
-            getPlayerDir(false);
-            horizontalInput = Input.GetAxis("Horizontal2");
-			jump(false);
-            dash(false);
-            move(false);
-        }
-        regenJump -= Time.deltaTime;
-        regenDash -= Time.deltaTime;
-
-		if (regenJump <= 0)
-		{
-            //Ray2D jumpRay = new Ray2D(transform.position, Vector2.down);
-            RaycastHit2D jumpRay = Physics2D.Raycast(transform.position, Vector2.down, 1f, groundLayer);
-            if(jumpRay.collider != null)
+            if (player1)
+                Variables.player1 = gameObject;
+            else
+                Variables.player2 = gameObject;
+            if (player1)
             {
-				onGround = true;
-			}
-		}
+                getPlayerDir(true);
+                horizontalInput = Input.GetAxis("Horizontal");
+                jump(true);
+                dash(true);
+                move(true);
+            }
+            else
+            {
+                getPlayerDir(false);
+                horizontalInput = Input.GetAxis("Horizontal2");
+                jump(false);
+                dash(false);
+                move(false);
+            }
+            regenJump -= Time.deltaTime;
+            regenDash -= Time.deltaTime;
+
+            if (regenJump <= 0)
+            {
+                //Ray2D jumpRay = new Ray2D(transform.position, Vector2.down);
+                RaycastHit2D jumpRay = Physics2D.Raycast(transform.position, Vector2.down, 1f, groundLayer);
+                if (jumpRay.collider != null)
+                {
+                    onGround = true;
+                }
+            }
+        }
 	}
 
     //Functions
