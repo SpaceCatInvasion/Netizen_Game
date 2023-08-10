@@ -203,4 +203,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd7087b1ca569462492f47c3b2cef02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnTime: 3
   timer: {fileID: 2741257410210328150}
