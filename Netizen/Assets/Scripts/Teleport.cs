@@ -9,13 +9,17 @@ public class Teleport : MonoBehaviour
     public GameObject tp1;
     public GameObject tp2;
     public bool telep;
-    public GameObject player1;
-    public GameObject player2;
+    private GameObject player1 = Variables.player1;
+    private GameObject player2 = Variables.player2;
     public float timer = 0;
+    private AudioClip teleportSound = null;
+    private AudioSource teleportSource = null;
+
 
     // Start is called before the first frame update
     void Start()
     {
+      
     }
 
     // Update is called once per frame
