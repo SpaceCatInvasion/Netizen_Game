@@ -13,8 +13,9 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+		target = (player1.transform.position + player2.transform.position) / 2;
+		transform.position = target;
+	}
 
     // Update is called once per frame
     void Update()

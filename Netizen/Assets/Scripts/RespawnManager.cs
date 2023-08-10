@@ -9,6 +9,7 @@ public class RespawnManager : MonoBehaviour
     public bool p1Respawn = false;
     public bool p2Respawn = false;
     public List<GameObject> respawnPoints;
+    public GameObject rightRespawnAttack, rightRespawnDefend, leftRespawnAttack, leftRespawnDefend;
 
     private int index = 0;
     private float lowestDist = 10000000000;
@@ -18,8 +19,18 @@ public class RespawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        if(Variables.fromDirection == 1)
+        {
+            Variables.player2.transform.position = leftRespawnAttack.transform.position;
+            Variables.player1.transform.position = leftRespawnDefend.transform.position;
+        }
+
+		else if (Variables.fromDirection == -1)
+		{
+			Variables.player2.transform.position = rightRespawnAttack.transform.position;
+			Variables.player1.transform.position = rightRespawnDefend.transform.position;
+		}
+	}
 
     // Update is called once per frame
     void Update()
