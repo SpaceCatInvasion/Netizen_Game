@@ -352,8 +352,8 @@ public class PlayerController : MonoBehaviour
     }
     public void knockBack(Vector2 dir, float strength)
     {
-        print("KNOCK");
-        knockDir = dir*80*Mathf.Log(strength+1);
+        //print("KNOCK");
+        knockDir = dir * 80 * Mathf.Log(strength+1);
         knockTimer = strength;
         Variables.p1Priority = !player1;
         Variables.noPriority = false;

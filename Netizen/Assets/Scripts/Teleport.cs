@@ -12,7 +12,6 @@ public class Teleport : MonoBehaviour
     public float timer = 0;
     public AudioSource teleportSource;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +26,10 @@ public class Teleport : MonoBehaviour
 
     public void teleport(bool p1)
     {
+        Variables.teleportTrigger = true;
         if (p1)
         {
+            Variables.teleportPlayer = true;
             if (telep)
             {
                 teleportSource.Play();
@@ -44,7 +45,8 @@ public class Teleport : MonoBehaviour
         }
         else
         {
-            if (telep)
+			Variables.teleportPlayer = false;
+			if (telep)
             {
                 teleportSource.Play();
                 Variables.player2.transform.position = tp2.transform.position + new Vector3(0, 1, 0);

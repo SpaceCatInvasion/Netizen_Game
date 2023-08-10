@@ -19,10 +19,24 @@ public class CameraController : MonoBehaviour
 		transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX), Mathf.Clamp(transform.position.y, minY, maxY), -10);
 	}
 
+    void CameraTeleport()
+    {
+        if (Variables.p1Priority) target = player1.transform.position;
+        else target = player2.transform.position;
+
+		transform.position = target;
+		transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX), Mathf.Clamp(transform.position.y, minY, maxY), -10);
+	}
+
     // Update is called once per frame
     void Update()
     {
-
+        if (Variables.teleportTrigger)
+        {
+            CameraTeleport();
+            Variables.teleportTrigger = false;
+            return;
+        }
 		if (Variables.noPriority)
 		{
 			target = (player1.transform.position + player2.transform.position) / 2;

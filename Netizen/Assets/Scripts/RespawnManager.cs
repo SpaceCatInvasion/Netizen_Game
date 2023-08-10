@@ -94,7 +94,7 @@ public class RespawnManager : MonoBehaviour
         {
             p1Timer-=Time.deltaTime;
         }
-        else if(p1Timer>-1)
+        else if(p1Timer > -1)
         {
             Variables.player1.gameObject.SetActive(true);
             p1Timer = -1;

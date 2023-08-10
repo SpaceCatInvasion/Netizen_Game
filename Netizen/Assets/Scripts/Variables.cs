@@ -20,4 +20,6 @@ public class Variables : MonoBehaviour
     public static GameObject player2;
     public static int fromDirection; // 1 = right, 0 = center, -1 = left
     public static bool startedGame = false;
+    public static bool teleportTrigger = false;
+    public static bool teleportPlayer = false; // true = p1, false = p2
 }
