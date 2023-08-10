@@ -156,7 +156,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2ab5e56a760e04b71964fe4a6f91eb29, type: 3}
-  m_Color: {r: 0.9327779, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.4292453, b: 0.9276476, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -206,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnTime: 3
   timer: {fileID: 2741257410210328150}
+  crumble: {fileID: 0}
 --- !u!95 &3935044128224425171
 Animator:
   serializedVersion: 5
