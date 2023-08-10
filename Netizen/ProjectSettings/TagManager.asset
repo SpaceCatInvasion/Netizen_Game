@@ -46,6 +46,9 @@ TagManager:
   - name: Bg
     uniqueID: 4177967277
     locked: 0
+  - name: Traps
+    uniqueID: 4290556061
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

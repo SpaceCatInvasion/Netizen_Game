@@ -136,7 +136,7 @@ public class GunScript : MonoBehaviour
                     dir = new Vector2(-1, 1);
                     transform.up = dir;
                 }
-                if (Input.GetKey(KeyCode.Slash))
+                if (Input.GetKey(KeyCode.RightShift))
                 {
                     chargeShot += Time.deltaTime;
                 }
