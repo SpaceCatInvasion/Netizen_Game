@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ba8f0e89bbc1c944d97befa919add57e, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.47483015, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.47483015, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -125,3 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trapDoor: {fileID: 0}
+  doorSource: {fileID: 0}

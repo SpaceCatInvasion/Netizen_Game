@@ -77,17 +77,17 @@ public class GunScript : MonoBehaviour
                         if (chargeShot > 1.4f)
                         {
                             bul.size = 0.4f;
-                            bul.speed = 4;
+                            bul.speed = 7;
                         }
                         else if (chargeShot > 0.7f)
                         {
                             bul.size = 0.2f;
-                            bul.speed = 7;
+                            bul.speed = 11;
                         }
                         else
                         {
                             bul.size = 0.1f;
-                            bul.speed = 10;
+                            bul.speed = 16;
                         }
                     }
                     chargeShot = 0;
