@@ -56,6 +56,10 @@ public class RespawnManager : MonoBehaviour
                 }
             }
             Variables.player1.transform.position = respawnPoints[index].transform.position;
+            Rigidbody2D rb = Variables.player1.GetComponent<Rigidbody2D>();
+            rb.velocity = Vector2.zero;
+            PlayerController script = Variables.player1.GetComponent<PlayerController>();
+            script.knockTimer = 0;
             p1Respawn = false;
             p1Timer = respawnTime;
         }
@@ -79,6 +83,10 @@ public class RespawnManager : MonoBehaviour
                 }
             }
             Variables.player2.transform.position = respawnPoints[index].transform.position;
+            Rigidbody2D rb = Variables.player2.GetComponent<Rigidbody2D>();
+            rb.velocity = Vector2.zero;
+            PlayerController script = Variables.player2.GetComponent<PlayerController>();
+            script.knockTimer = 0;
             p2Respawn = false;
             p2Timer = respawnTime;
         }
