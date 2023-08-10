@@ -21,14 +21,14 @@ public class RespawnManager : MonoBehaviour
     {
         if(Variables.fromDirection == 1)
         {
-            Variables.player2.transform.position = rightRespawnAttack.transform.position;
-            Variables.player1.transform.position = rightRespawnDefend.transform.position;
+            Variables.player2.transform.position = leftRespawnAttack.transform.position;
+            Variables.player1.transform.position = leftRespawnDefend.transform.position;
         }
 
-		if (Variables.fromDirection == -1)
+		else if (Variables.fromDirection == -1)
 		{
-			Variables.player2.transform.position = leftRespawnAttack.transform.position;
-			Variables.player1.transform.position = leftRespawnDefend.transform.position;
+			Variables.player2.transform.position = rightRespawnAttack.transform.position;
+			Variables.player1.transform.position = rightRespawnDefend.transform.position;
 		}
 	}
 

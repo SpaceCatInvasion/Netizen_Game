@@ -23,9 +23,16 @@ public class TransitionTrigger : MonoBehaviour
 	{
         if (collision.gameObject.CompareTag(player))
         {
-            if (player == "Player2") Variables.fromDirection = 1;
-            if (player == "Player1") Variables.fromDirection = -1;
-			SceneManager.LoadScene(levelName);
+            if (player == "Player2" && !Variables.p1Priority)
+            {
+                Variables.fromDirection = -1;
+				SceneManager.LoadScene(levelName);
+			}
+            if (player == "Player1" && Variables.p1Priority)
+            {
+                Variables.fromDirection = 1;
+				SceneManager.LoadScene(levelName);
+			}
 		}
 	}
 }
