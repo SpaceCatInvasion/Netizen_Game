@@ -68,7 +68,7 @@ public class GunScript : MonoBehaviour
                 }
                 else if (Input.GetKeyUp(KeyCode.V))
                 {
-                    if (chargeShot > 0.1f)
+                    if (chargeShot > 0.05f)
                     {
                         MoveForward bul = Instantiate(bulletPreFab, transform.position + new Vector3(dir.x, dir.y, 0), transform.rotation).GetComponent<MoveForward>();
                         bul.dir = dir;
@@ -140,7 +140,7 @@ public class GunScript : MonoBehaviour
                 }
                 else if (Input.GetKeyUp(KeyCode.Slash))
                 {
-                    if (chargeShot > 0.1f)
+                    if (chargeShot > 0.05f)
                     {
                         MoveForward bul = Instantiate(bulletPreFab, transform.position + new Vector3(dir.x, dir.y, 0), transform.rotation).GetComponent<MoveForward>();
                         bul.dir = dir;
