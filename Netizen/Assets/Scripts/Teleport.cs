@@ -9,8 +9,6 @@ public class Teleport : MonoBehaviour
     public GameObject tp1;
     public GameObject tp2;
     public bool telep;
-    private GameObject player1 = Variables.player1;
-    private GameObject player2 = Variables.player2;
     public float timer = 0;
     public AudioSource teleportSource;
 
@@ -34,13 +32,13 @@ public class Teleport : MonoBehaviour
             if (telep)
             {
                 teleportSource.Play();
-                player1.transform.position = tp2.transform.position+new Vector3(0,1,0);
+                Variables.player1.transform.position = tp2.transform.position+new Vector3(0,1,0);
                 timer = 0.5f;
             }
             else
             {
                 teleportSource.Play();
-                player1.transform.position = tp1.transform.position + new Vector3(0, 1, 0);
+                Variables.player1.transform.position = tp1.transform.position + new Vector3(0, 1, 0);
                 timer = 0.5f;
             }
         }
@@ -49,13 +47,13 @@ public class Teleport : MonoBehaviour
             if (telep)
             {
                 teleportSource.Play();
-                player2.transform.position = tp2.transform.position + new Vector3(0, 1, 0);
+                Variables.player2.transform.position = tp2.transform.position + new Vector3(0, 1, 0);
                 timer = 0.5f;
             }
             else
             {
                 teleportSource.Play();
-                player2.transform.position = tp1.transform.position + new Vector3(0, 1, 0);
+                Variables.player2.transform.position = tp1.transform.position + new Vector3(0, 1, 0);
                 timer = 0.5f;
             }
         }
