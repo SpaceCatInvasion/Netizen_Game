@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Period) && onGround) // p2 Jump
+            if (Input.GetKeyDown(KeyCode.Slash) && onGround) // p2 Jump
             {
                 jumpSource.Play();
                 playerRb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                if (Input.GetKeyDown(KeyCode.N)) //p2 dash
+                if (Input.GetKeyDown(KeyCode.M)) //p2 dash
                 {
                     dashTimer = dashLength;
                     dashed = true;

@@ -140,7 +140,7 @@ public class GunScript : MonoBehaviour
                 {
                     chargeShot += Time.deltaTime;
                 }
-                else if (Input.GetKeyUp(KeyCode.Slash))
+                else if (Input.GetKeyUp(KeyCode.RightShift))
                 {
                     if (chargeShot > 0.05f)
                     {
