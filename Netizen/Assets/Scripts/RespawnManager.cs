@@ -45,7 +45,7 @@ public class RespawnManager : MonoBehaviour
             }
             for (int i=0;i<respawnPoints.Count; i++)
             {
-                if (respawnPoints[i].transform.position.x > Variables.player2.transform.position.x)
+                if (respawnPoints[i].transform.position.x > Variables.player2.transform.position.x|| respawnPoints[i].transform.position.y < Variables.player2.transform.position.y-7)
                 {
                     continue;
                 }
