@@ -11,10 +11,12 @@ public class CameraController : MonoBehaviour
     private Vector3 target;
     private float smooth = 4f;
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
+        yield return null;
 		target = (player1.transform.position + player2.transform.position) / 2;
 		transform.position = target;
+		transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX), Mathf.Clamp(transform.position.y, minY, maxY), -10);
 	}
 
     // Update is called once per frame

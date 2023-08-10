@@ -17,8 +17,9 @@ public class RespawnManager : MonoBehaviour
     private float p1Timer = -1;
     private float p2Timer = -1;
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
+        yield return null;
         if(Variables.fromDirection == 1)
         {
             Variables.player2.transform.position = leftRespawnAttack.transform.position;
