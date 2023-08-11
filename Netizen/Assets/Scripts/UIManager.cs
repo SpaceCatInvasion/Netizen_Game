@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -24,4 +25,12 @@ public class UIManager : MonoBehaviour
         Variables.startedGame = true;
         startGameScreen.SetActive(false);
     }
+
+    public void Tutorial()
+    {
+		Variables.startedGame = true;
+        SceneManager.LoadScene("Level Tutorial");
+	}
+
+
 }
