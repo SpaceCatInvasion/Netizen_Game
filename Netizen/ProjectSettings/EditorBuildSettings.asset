@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Jia Rui Dev/Level 3.unity
     guid: ca96033e1b6de425e8753d24cd4b8b0e
+  - enabled: 1
+    path: Assets/Scenes/Jia Rui Dev/Level Tutorial.unity
+    guid: 907daae0058074c0e96f8ea98183324a
   m_configObjects: {}
