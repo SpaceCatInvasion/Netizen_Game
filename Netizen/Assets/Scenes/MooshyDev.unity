@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 2
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -422,12 +422,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 181376816}
     m_Modifications:
     - target: {fileID: 5370056174502178491, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370056174502178491, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370056174502178491, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370056174502178491, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5370056174502178491, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 200
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370056174502178491, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5370056174502178492, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
       propertyPath: m_fontColor.b
@@ -444,6 +460,10 @@ PrefabInstance:
     - target: {fileID: 5370056174502178492, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4293279231
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370056174502178493, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5370056175525161088, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
       propertyPath: m_Name
@@ -532,6 +552,26 @@ PrefabInstance:
     - target: {fileID: 5370056175525161089, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370056176274526898, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370056176274526898, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370056176274526898, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370056176274526898, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370056176274526898, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
@@ -2456,14 +2496,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5660378, g: 0.54734784, b: 0.54734784, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 749905f72a1944ae985481d91376da99, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9de08fdd6eb3049e1b13cec7f91d10df, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
