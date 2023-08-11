@@ -16301,11 +16301,11 @@ PrefabInstance:
     - target: {fileID: 2737340064234312494, guid: 01d3ab25809e5a24ebecd044bf670870, type: 3}
       propertyPath: leftRespawnAttack
       value: 
-      objectReference: {fileID: 627826863}
+      objectReference: {fileID: 1652388177}
     - target: {fileID: 2737340064234312494, guid: 01d3ab25809e5a24ebecd044bf670870, type: 3}
       propertyPath: leftRespawnDefend
       value: 
-      objectReference: {fileID: 1652388177}
+      objectReference: {fileID: 627826863}
     - target: {fileID: 2737340064234312494, guid: 01d3ab25809e5a24ebecd044bf670870, type: 3}
       propertyPath: rightRespawnAttack
       value: 
@@ -52460,7 +52460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 1393628864}
   player2: {fileID: 2001589013}
-  minX: 4.4
+  minX: -2
   maxX: 128
   minY: 4
   maxY: 43.5

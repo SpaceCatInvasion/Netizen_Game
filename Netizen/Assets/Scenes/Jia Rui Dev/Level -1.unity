@@ -16860,7 +16860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: Level 0
-  player: Player2
+  player: Player1
 --- !u!61 &867135454
 BoxCollider2D:
   m_ObjectHideFlags: 0
