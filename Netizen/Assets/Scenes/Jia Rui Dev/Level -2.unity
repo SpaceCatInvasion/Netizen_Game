@@ -627,6 +627,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: p2Floor (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028698, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028701, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028701, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Color.g
+      value: 0.10849059
+      objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028701, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2671886
+      objectReference: {fileID: 0}
     - target: {fileID: 773105030746028702, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -7502,6 +7518,22 @@ PrefabInstance:
     - target: {fileID: 773105030746028698, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
       propertyPath: m_Name
       value: p2Floor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028698, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028701, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028701, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Color.g
+      value: 0.10849059
+      objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028701, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2671886
       objectReference: {fileID: 0}
     - target: {fileID: 773105030746028702, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
       propertyPath: m_RootOrder
@@ -23578,6 +23610,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: p2Floor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028698, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028701, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028701, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Color.g
+      value: 0.10849059
+      objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028701, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2671886
+      objectReference: {fileID: 0}
     - target: {fileID: 773105030746028702, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -23975,6 +24023,22 @@ PrefabInstance:
     - target: {fileID: 773105030746028698, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
       propertyPath: m_Name
       value: p2Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028698, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028701, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028701, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Color.g
+      value: 0.10849059
+      objectReference: {fileID: 0}
+    - target: {fileID: 773105030746028701, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2671886
       objectReference: {fileID: 0}
     - target: {fileID: 773105030746028702, guid: ad53445c9f29c5e429b2fdebf6743e53, type: 3}
       propertyPath: m_RootOrder
