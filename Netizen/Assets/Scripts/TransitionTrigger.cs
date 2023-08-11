@@ -21,6 +21,12 @@ public class TransitionTrigger : MonoBehaviour
     }
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
+        if(player == "")
+        {
+            SceneManager.LoadScene(levelName);
+            return;
+        }
+
         if (collision.gameObject.CompareTag(player))
         {
             if (player == "Player2" && !Variables.p1Priority)

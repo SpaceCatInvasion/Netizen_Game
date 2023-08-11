@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7265638394357404517}
   - component: {fileID: 2741257410210328150}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3972710007888425538}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Crumble Trap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4069205825083788582}
   - component: {fileID: 3935044128224425171}
   - component: {fileID: 5719824674912934420}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cumbling floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
