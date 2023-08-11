@@ -1252,7 +1252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504353615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.8, y: -0.99, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6942,11 +6942,11 @@ PrefabInstance:
     - target: {fileID: 2737340064234312494, guid: 01d3ab25809e5a24ebecd044bf670870, type: 3}
       propertyPath: leftRespawnAttack
       value: 
-      objectReference: {fileID: 627826863}
+      objectReference: {fileID: 1905686072}
     - target: {fileID: 2737340064234312494, guid: 01d3ab25809e5a24ebecd044bf670870, type: 3}
       propertyPath: leftRespawnDefend
       value: 
-      objectReference: {fileID: 1905686072}
+      objectReference: {fileID: 627826863}
     - target: {fileID: 2737340064234312494, guid: 01d3ab25809e5a24ebecd044bf670870, type: 3}
       propertyPath: respawnPoints.Array.size
       value: 17
@@ -7563,7 +7563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f38001220ce4c1a9c56e570576c811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: Level 0
+  levelName: Level 1
   player: Player2
 --- !u!61 &867135454
 BoxCollider2D:
@@ -9966,9 +9966,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingLayerID: -117000019
+  m_SortingLayer: -2
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
