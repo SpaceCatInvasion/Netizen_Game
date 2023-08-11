@@ -106,6 +106,6 @@ public class GameOverScript : MonoBehaviour
         Variables.startedGame = false;
         Variables.noPriority = true;
         Variables.fromDirection = 0;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Level 0");
     }
 }
