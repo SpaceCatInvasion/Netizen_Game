@@ -979,7 +979,7 @@ RectTransform:
   m_GameObject: {fileID: 271806008}
   m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1656872968}
@@ -10367,6 +10367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 5370056175525161088, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5370056175525161089, guid: 93ed620ea7b765c4b9e306851a675b3d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -12251,7 +12255,7 @@ RectTransform:
   m_GameObject: {fileID: 1488041884}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1656872968}
