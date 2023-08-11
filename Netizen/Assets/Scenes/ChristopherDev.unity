@@ -1310,6 +1310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 27874389525728813, guid: 75ea9bf02b7e053438e1236e77711746, type: 3}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
     - target: {fileID: 27874389525728814, guid: 75ea9bf02b7e053438e1236e77711746, type: 3}
       propertyPath: RespawnManager
       value: 
