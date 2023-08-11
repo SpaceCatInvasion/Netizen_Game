@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 0.15
-  speed: 15
+  speed: 30
   dir: {x: 0, y: 0}
 --- !u!61 &-8315413897451598260
 BoxCollider2D:
