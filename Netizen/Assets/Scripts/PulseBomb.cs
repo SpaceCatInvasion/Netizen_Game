@@ -34,7 +34,7 @@ public class PulseBomb : MonoBehaviour
                     PlayerController script = Variables.player1.GetComponent<PlayerController>();
                     bool temp = Variables.p1Priority;
                     bool temp2 = Variables.noPriority;
-                    script.knockBack((Variables.player1.transform.position - transform.position)/ (p1Dist+0.5f),strength/p1Dist);
+                    script.knockBack((Variables.player1.transform.position - transform.position) / p1Dist,strength/p1Dist);
                     Variables.p1Priority = temp;
                     Variables.noPriority = temp2;
                 }
@@ -43,7 +43,7 @@ public class PulseBomb : MonoBehaviour
                     PlayerController script = Variables.player2.GetComponent<PlayerController>();
                     bool temp = Variables.p1Priority;
                     bool temp2 = Variables.noPriority;
-                    script.knockBack((Variables.player2.transform.position - transform.position)/ (p2Dist+0.5f), strength / p2Dist);
+                    script.knockBack((Variables.player2.transform.position - transform.position) / p2Dist, strength / p2Dist);
                     Variables.p1Priority = temp;
                     Variables.noPriority = temp2;
                 }

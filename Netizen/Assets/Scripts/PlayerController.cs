@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     public RespawnManager RespawnManager;
     public AudioSource jumpSource;
-    public ParticleSystem dashParticles;
 
     //Private
     private float horizontalInput;
@@ -127,7 +126,6 @@ public class PlayerController : MonoBehaviour
                     dashTimer = dashLength;
                     dashed = true;
                     regenDash = 0.1f;
-                    dashParticles.Play();
                 }
             }
             else
@@ -137,7 +135,6 @@ public class PlayerController : MonoBehaviour
                     dashTimer = dashLength;
                     dashed = true;
                     regenDash = 0.1f;
-                    dashParticles.Play();
                 }
             }
         }
@@ -286,7 +283,6 @@ public class PlayerController : MonoBehaviour
             }
             else if (dashTimer>=-stopDashDelay)
             {
-                dashParticles.Stop();
                 playerRb.velocity = new Vector2(0, 0);
                 dashTimer -= Time.deltaTime;
             }
@@ -340,7 +336,6 @@ public class PlayerController : MonoBehaviour
             }
             else if (dashTimer >= -stopDashDelay)
             {
-                dashParticles.Stop();
                 playerRb.velocity = new Vector2(0, 0);
                 dashTimer -= Time.deltaTime;
             }
